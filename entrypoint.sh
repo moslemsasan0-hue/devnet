@@ -2,9 +2,6 @@
 set -e
 
 echo "Starting Xray..."
-echo "Listening on Railway port: ${PORT}"
+echo "Xray will listen on 0.0.0.0:8443"
 
-sed "s/__PORT__/${PORT}/g" \
-    /etc/xray/config.json > /tmp/config.json
-
-exec xray run -config /tmp/config.json
+exec xray run -config /etc/xray/config.json
