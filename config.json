@@ -1,0 +1,40 @@
+{
+  "inbounds": [
+    {
+      "tag": "reality-in",
+      "listen": "0.0.0.0",
+      "port": __PORT__,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "61c74331-f60c-4440-bcab-ada8a23e5a69",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "target": "partners.shopify.com:443",
+          "serverNames": [
+            "partners.shopify.com"
+          ],
+          "privateKey": "kuQgOGshD_qJYrAYbrprKedotyBV0Hn2-oppUNpNvWU",
+          "shortIds": [
+            "abcd1234"
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    }
+  ]
+}
