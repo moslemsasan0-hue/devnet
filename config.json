@@ -3,7 +3,7 @@
     {
       "tag": "vless-ws",
       "listen": "0.0.0.0",
-      "port": 8443,
+      "port": "env:PORT",
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -17,7 +17,7 @@
         "network": "ws",
         "security": "none",
         "wsSettings": {
-          "path": "/devnet=?ed=2560"
+          "path": "/devnet"
         }
       }
     }
