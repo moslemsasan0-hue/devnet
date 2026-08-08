@@ -1,39 +1,29 @@
 {
   "inbounds": [
     {
-      "tag": "reality-in",
+      "tag": "vless-ws",
       "listen": "0.0.0.0",
       "port": 8443,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "61c74331-f60c-4440-bcab-ada8a23e5a69",
-            "flow": "xtls-rprx-vision"
+            "id": "c5d61ec8-69c7-4158-9a66-8aa3cbf1d230"
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "target": "partners.shopify.com:443",
-          "serverNames": [
-            "partners.shopify.com"
-          ],
-          "privateKey": "kuQgOGshD_qJYrAYbrprKedotyBV0Hn2-oppUNpNvWU",
-          "shortIds": [
-            "abcd1234"
-          ]
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "path": "/devnet=?ed=2560"
         }
       }
     }
   ],
   "outbounds": [
     {
-      "tag": "direct",
       "protocol": "freedom"
     }
   ]
