@@ -3,7 +3,7 @@
     {
       "tag": "vless-ws",
       "listen": "127.0.0.1",
-      "port": "100",
+      "port": "101",
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -24,7 +24,7 @@
      {
       "tag": "vless-xhttp",
       "listen": "127.0.0.1",
-      "port": 101,
+      "port": 100,
       "protocol": "vless",
       "settings": {
         "clients": [
