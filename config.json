@@ -3,7 +3,7 @@
     {
       "tag": "vless-ws",
       "listen": "127.0.0.1",
-      "port": "101",
+      "port": 101,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -20,8 +20,8 @@
           "path": "/devnet+ws"
         }
       }
-    }, 
-     {
+    },
+    {
       "tag": "vless-xhttp",
       "listen": "127.0.0.1",
       "port": 100,
@@ -43,44 +43,33 @@
         }
       }
     },
-      {
-      "tag": "vless-reality",
+    {
+      "tag": "vless-tcp",
       "listen": "0.0.0.0",
       "port": 8443,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "a7c2f7bb-26e9-4946-8e76-922f4313fe9d",
-            "flow": "xtls-rprx-vision"
+            "id": "a7c2f7bb-26e9-4946-8e76-922f4313fe9d"
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
         "network": "raw",
-        "security": "reality",
+        "security": "none",
         "rawSettings": {
           "header": {
             "type": "none"
           }
-        },
-        "realitySettings": {
-          "show": false,
-          "target": "partners.shopify.com:443",
-          "serverNames": [
-            "partners.shopify.com"
-          ],
-          "privateKey": "UAynic_ML4qAa5H2fLDCWZGdQk1iqV145JHzqoYs53c",
-          "shortIds": [
-            "abcd1234"
-          ]
         }
       }
     }
   ],
   "outbounds": [
     {
+      "tag": "direct",
       "protocol": "freedom"
     }
   ]
