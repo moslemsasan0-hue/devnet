@@ -42,29 +42,6 @@
           "mode": "auto"
         }
       }
-    },
-    {
-      "tag": "vless-tcp",
-      "listen": "0.0.0.0",
-      "port": 8443,
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          {
-            "id": "a7c2f7bb-26e9-4946-8e76-922f4313fe9d"
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "raw",
-        "security": "none",
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
     }
   ],
   "outbounds": [
