@@ -2,13 +2,13 @@
   "inbounds": [
     {
       "tag": "vless-ws",
-      "listen": "0.0.0.0",
-      "port": "env:PORT",
+      "listen": "127.0.0.1",
+      "port": "100",
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "c5d61ec8-69c7-4158-9a66-8aa3cbf1d230"
+            "id": "a7c2f7bb-26e9-4946-8e76-922f4313fe9d"
           }
         ],
         "decryption": "none"
@@ -17,7 +17,64 @@
         "network": "ws",
         "security": "none",
         "wsSettings": {
-          "path": "/devnet"
+          "path": "/devnet+ws"
+        }
+      }
+    }, 
+     {
+      "tag": "vless-xhttp",
+      "listen": "127.0.0.1",
+      "port": 101,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "a7c2f7bb-26e9-4946-8e76-922f4313fe9d"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "none",
+        "xhttpSettings": {
+          "path": "/devnet+xhttp",
+          "mode": "auto"
+        }
+      }
+    },
+      {
+      "tag": "vless-reality",
+      "listen": "0.0.0.0",
+      "port": 8443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "a7c2f7bb-26e9-4946-8e76-922f4313fe9d",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "raw",
+        "security": "reality",
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "realitySettings": {
+          "show": false,
+          "target": "partners.shopify.com:443",
+          "serverNames": [
+            "partners.shopify.com"
+          ],
+          "privateKey": "a7c2f7bb-26e9-4946-8e76-922f4313fe9d",
+          "shortIds": [
+            "abcd1234"
+          ]
         }
       }
     }
