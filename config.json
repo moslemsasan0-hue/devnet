@@ -71,7 +71,7 @@
           "serverNames": [
             "partners.shopify.com"
           ],
-          "privateKey": "a7c2f7bb-26e9-4946-8e76-922f4313fe9d",
+          "privateKey": "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcde",
           "shortIds": [
             "abcd1234"
           ]
